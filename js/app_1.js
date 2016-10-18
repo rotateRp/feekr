@@ -2,13 +2,7 @@ var giftMoudle = angular.module('gift', [ 'ionic' ]);
 
 giftMoudle.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 	$stateProvider
-	
-	.state('index',{
-		url: '/index',
-		abstract:true,  
-    	templateUrl: "views/tabs.html"  
-	})
-	.state('index.home', {
+	.state('home', {
 		url: '/home',
 		views: {
 			'home': {
@@ -17,7 +11,7 @@ giftMoudle.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
 			}
 		}
 	})
-	.state('index.top', {
+	.state('top', {
 		url: '/top',
 		views: {
 			'top': {
@@ -25,7 +19,7 @@ giftMoudle.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
 			}
 		}
 	})
-	.state('index.strategy', {
+	.state('strategy', {
 		url: '/strategy',
 		views: {
 			'strategy': {
@@ -35,13 +29,15 @@ giftMoudle.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
 		}
 	})
 	.state('hangzhou', {
-		url: '/hangzhou/1001/hangzhou',			
-		templateUrl: 'views/strategy/hangzhouStrategy.html',
-		controller: 'hangzhouCtrl'
+		url: '/strategycity/:id',
+		cache:'false', 
+		views: {	
+			templateUrl: 'views/strategy/hangzhouStrategy.html',
+			controller: 'hangzhouCtrl'
 			
-		
+		}
 	})
-	.state('index.me', {
+	.state('me', {
 		url: '/me',
 		views: {
 			'me': {
@@ -50,5 +46,5 @@ giftMoudle.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
 		}
 	});
 	
-	$urlRouterProvider.otherwise('/index/home');//路径名字
+	$urlRouterProvider.otherwise('/home');//路径名字
 }])

@@ -1,0 +1,38 @@
+<ion-view title="">
+		<ion-header-bar>
+			<!-- 导航栏部分 -->
+			<ion-nav-bar class="bar-light">
+				<ion-nav-buttons side="left">
+					<button class="button button-clear icon ion-ios-arrow-back" ng-click="backAction()"></button>
+				</ion-nav-buttons>
+				<ion-nav-title>
+					<div class="strategy-title">选择城市</div>
+				</ion-nav-title>
+			</ion-nav-bar>	
+		</ion-header-bar>
+		
+	
+		<ion-content class="has-header"  id="strategy">
+			<div class="current-city">
+				<div class="city">当前城市：</div>
+				<div class="current-location">
+					<i class="icon ion-android-alert"></i>
+					该城市攻略暂未开放
+				</div>
+			</div>
+			<div class="list-wrapper">
+				<div class="headline">|| 已开通城市</div>
+				<div class="city-list">
+					<a class="city-item" ng-repeat="cityItem in cityData" ng-click="selectAction(cityItem.id,cityItem.name)"  >{{cityItem.cityname}}</a>
+					
+				</div>
+			</div>
+			<div class="near">
+				<div class="city-list">
+					<a class="city-item" href=""><i class="icon ion-ios-location-outline"></i>我的附近</a>
+					
+				</div>
+			</div>
+		</ion-content>
+
+</ion-view>

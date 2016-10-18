@@ -1,0 +1,71 @@
+<ion-view title="">
+	<ion-content id="hangzhou">
+		
+		<!---------------  头部  --------------------- -->
+		<div class="head-img">
+			<img ng-src="{{likesHangzhou.cityCover}}" />
+			<div class="city-name">
+				<a ng-click="goBackAction()">{{likesHangzhou.cityName}}<i class="icon ion-chevron-down"></i></a>
+				<p>{{likesHangzhou.fxbCount}}位小编为你推荐</p>
+			</div>
+			<div class="table-nav">
+				<div class="table-cell">
+					<span>3条</span>
+					推荐路线
+				</div>
+				<div class="table-cell">
+					<span>29个</span>
+					城市主题
+				</div>
+				<div class="table-cell">
+					<span>769种</span>
+					小众玩法
+				</div>
+			</div>
+		</div>
+		
+		<!---------------  推荐列表  --------------------- -->
+		
+		<ion-list class="list-img list-borderless" >
+			<div class="list-title">
+				<p>精选推荐</p>
+			</div>
+			<ion-item ng-repeat="item in hangzhouList" >
+				<img ng-src="{{item.cover}}" />
+				<p>{{item.title}}</p>
+			</ion-item>
+		</ion-list>
+		
+		
+		
+		<ion-list class="likes-img list-borderless" >
+			<div class="likes-title">
+				<span>私藏攻略</span>
+			</div>
+			<ion-item >
+				<img ng-src="{{pathCover}}" />
+				<div class="likes-desc">{{pathDesc}}</div>
+				<div class="text-center">
+					<p><i class="icon ion-ios-cog-outline"></i></p>
+					<p>杭州的3条推荐路线</p>
+				</div>
+			</ion-item>
+			<ion-item >
+				<img ng-src="{{playCover}}" />
+				<div class="likes-desc">{{playDesc}}</div>
+				<div class="text-center">
+					<p><i class="icon ion-ios-shuffle-strong"></i></p>
+					<p>杭州的769种经典玩法</p>
+				</div>
+			</ion-item>
+			<ion-item >
+				<img ng-src="{{cityCover}}" />
+				<div class="likes-desc">{{cityDesc}}</div>
+				<div class="text-center">
+					<p><i class="icon ion-aperture"></i></p>
+					<p>杭州的29个城市主题</p>
+				</div>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

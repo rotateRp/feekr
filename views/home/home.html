@@ -1,5 +1,53 @@
-<ion-view title="首页">
-	<ion-content>
-		home
+<ion-view title="">
+	<ion-content id="home">
+		
+		<!-- -----------  首页轮播图  ------------------- -->
+		<div class="banner-wrapper">
+			<ion-slide-box does-continue="true" show-pager="true" auto-play="true" class="home-banner">
+				<ion-slide ng-repeat="imgSrc in bannerlist">
+					<img ng-src="{{imgSrc}}"/>
+				</ion-slide>
+			</ion-slide-box>
+		</div>
+		
+		
+		
+		<ion-list class="list-wrapper">
+			<div class="list-title">
+				<p>今日</p>
+				<p>Feekr, 每天为你推荐</p>
+			</div>
+			<ion-item class="list-today item-borderless" ng-repeat="todayData in todayList.today">
+					<img class="big-img" ng-src="{{todayData.cover}}" />
+					<img class="small-img" ng-src="{{todayData.avatar}}" />
+					<p>{{todayData.column}}</p>
+					<p>{{todayData.title}}</p>
+				
+			</ion-item>
+			<div class="list-title">
+				<p>昨日</p>
+				<p>时间, 一刻都不等人</p>
+			</div>
+			<ion-item class="list-yestoday  item-borderless" ng-repeat="yesterdayData in todayList.yesterday">
+					<img class="big-img"ng-src="{{yesterdayData.cover}}" />
+					<img  class="small-img" ng-src="{{yesterdayData.avatar}}" />
+					<p>{{yesterdayData.column}}</p>
+					<p>{{yesterdayData.title}}</p>
+				
+			</ion-item>
+			<div class="list-title">
+				<p>往期推荐</p>
+				<p></p>
+			</div>
+			<ion-item class="list-ago  item-borderless" ng-repeat="agoData in agoList">
+					<img class="big-img"ng-src="{{agoData.cover}}" />
+					<img  class="small-img" ng-src="{{agoData.avatar}}" />
+					<p>{{agoData.column}}</p>
+					<p>{{agoData.title}}</p>
+				
+			</ion-item>
+			<ion-infinite-scroll on-infinite = "loadMore()" distance="1%" spinner="dots" immediate-check="false" ng-if="canLoadMore"></ion-infinite-scroll>
+		</ion-list>
+		
 	</ion-content>
 </ion-view>

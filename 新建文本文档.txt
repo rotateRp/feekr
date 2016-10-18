@@ -1,0 +1,49 @@
+
+首页轮播图  http://wapi.feekr.com/strategy/slideThumb?code=strategy
+
+
+首页列表数据	http://wapi.feekr.com/selection/lists?page=2
+
+
+
+
+
+攻略 http://wapi.feekr.com/strategy/selectCity?latitude=22.574883&longitude=113.862433
+
+        杭州 ：http://wapi.feekr.com/strategy/selectionTheme?cityId=4102
+		http://wapi.feekr.com/strategy/cityStrategy?cityId=4102
+
+
+	南京 ：http://wapi.feekr.com/strategy/selectionTheme?cityId=4307
+		http://wapi.feekr.com/strategy/cityStrategy?cityId=4307
+
+	成都 ：http://wapi.feekr.com/strategy/selectionTheme?cityId=4359
+		http://wapi.feekr.com/strategy/cityStrategy?cityId=4359
+
+	上海 ：http://wapi.feekr.com/strategy/selectionTheme?cityId=6170
+		http://wapi.feekr.com/strategy/cityStrategy?cityId=6170
+
+	广州 ：http://wapi.feekr.com/strategy/selectionTheme?cityId=6425
+		http://wapi.feekr.com/strategy/cityStrategy?cityId=6425
+	
+	北京 ：http://wapi.feekr.com/strategy/selectionTheme?cityId=7188
+		http://wapi.feekr.com/strategy/cityStrategy?cityId=7188
+
+	我的附近： http://wapi.feekr.com/strategy/nearby?latitude=22.574912&longitude=113.862393
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

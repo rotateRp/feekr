@@ -1,49 +1,5 @@
-<ion-view title ="精选">
-
-	<ion-content id="jingxun">
-			<header><strong>‖ Feekr旅行</strong> － 精选目录</header>	
-			<div class="jxbanner">
-				<ion-slide-box delegate-handle="bannerI" does-continue="true" auto-play="true">
-					<ion-slide ng-repeat="item in bannerList">
-						<img class="bannerImg" ng-src="{{item.thumb}}"/>
-						<p>{{item.title}}</p>
-					</ion-slide>
-					
-				</ion-slide-box>
-			</div>
-		<div class="cont">
-			<div class="jxNavList">
-				<div ng-repeat="item in navList">
-					<a ng-href="{{item.url}}">
-						<img ng-src="{{item.thumb}}">	
-					</a>
-				</div>
-			</div>
-			<div class="contentList">
-				<div ng-repeat="item in contentList" class="contentList1">
-					<h4>||{{item.title}}</h4>
-					<div class="contentList2" ng-repeat="list in item.item">
-						<span>
-							<img ng-src="{{list.thumb}}">
-						</span>
-						<p>{{list.title}}</p>
-					</div>
-				</div>
-			</div>
-		</div>	
-		<div class="liks">
-			<div class="bar  bar-title">
-
-				<h4 class="title">猜猜你喜欢</h4>
-				<i class="button button-clear button-balanced ">换一批</i>
-			</div>
-			<div ng-repeat="items in likeImg" class="liksImg">
-					<div class="liksImg2">
-						<img ng-src="{{list.thumb}}" ng-repeat="list in items.item" ng-class="{'smallImg':$index==1}">
-						<p>{{items.title}}</p>
-					</div>
-					
-			</div>
-		</div>
+<ion-view title ="榜单">
+	<ion-content>
+		top
 	</ion-content>
 </ion-view>

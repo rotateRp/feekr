@@ -44,7 +44,7 @@ giftMoudle.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
 	.state("user",{
 		url:"/user",
 		templateUrl:"views/me/user.html"
-		
+		console.log("kkkkkklklk")
 	})
 	
 	$urlRouterProvider.otherwise('/main/home');//路径名字
